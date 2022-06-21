@@ -17,14 +17,43 @@
     <title>Random michis</title>
 </head>
 <body>
+    <span id="error"></span>
     <div class="main-container">
         <div class="section-1-container">
             <div class="card-container">
+
+
                 <h1>Random michis</h1>
-                <img class="michi-pic" alt="Random michi picture">
+
+                <div class="michis-container">
+                    <article class="michis-info">
+                        <img id="img1" class="michi-pic" alt="Random michi picture">
+                        <button type="button" id="btn1" onclick="saveFavoriteMichis()">Añadir a favoritos</button>
+                    </article>
+                    <article class="michis-info">
+                        <img id="img2" class="michi-pic" alt="Random michi picture">
+                        <button type="button" id="btn2" onclick="saveFavoriteMichis()">Añadir a favoritos</button>
+                    </article>
+                    <article class="michis-info">
+                        <img id="img3" class="michi-pic" alt="Random michi picture">
+                        <button type="button" id="btn3" onclick="saveFavoriteMichis()">Añadir a favoritos</button>
+                    </article>
+                </div>
+
+                <section id="favoriteMichis"></section>
+
                 <form action="">
-                    <button type="button" class="btn-3">Get a random michi</button>
+                    <button type="button" class="btn-3", id="btnRefresh">Get a random michi</button>
                 </form>
+
+            </div>
+
+            <div class="card-container">
+                <h1>Favorite Michis</h1>
+                <article class="michis-info">
+                    <img id="img3" class="michi-pic" alt="Random michi picture">
+                    <button>Quitar</button>
+                </article>
             </div>
         </div>
     </div>
