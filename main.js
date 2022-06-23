@@ -79,11 +79,12 @@ const loadFavoriteMichis = async () => {
             const btn = document.createElement('button');
             const btnText = document.createTextNode('Quitar');
 
-            img.src = element.image.url;    // Le agregamos lo necesario a las imagenes
+            img.src = element.image.url;    // Le agregamos lo necesario a las imagenes de los michis favoritos
             img.className = 'michi-pic';
 
-            btn.appendChild(btnText);       // Agregamos lo necesario a los botones
+            btn.appendChild(btnText);       // Agregamos lo necesario a los botones de quitar michi
             btn.onclick = () => deleteFavoriteMichis(element.id);
+            btn.className = 'btn-quitar-michi';
             
             article.appendChild(img);
             article.appendChild(btn);

@@ -1,11 +1,33 @@
 :root{
+/* Google Colors */
+--verde-google: #008744;
+--azul-google: #0057e7;
+--rojo-google: #d62d20;
+--amarillo-google: #ffa700;
+--blanco-google: #ffffff;
 
+/* So Many Lost Songs */
+--azul-fuerte: #051e3e;
+--azul-fuerte-2: #251e3e;
+--azul-rojizo: #451e3e;
+--azul-rojizo-2: #651e3e;
+--tinto: #851e3e;
+
+/* Font Sizes  */
+--extra-big: 18px;
+--big: 16px;
+--medium: 14px;
+--small: 12px;
+
+/* Para ponerlos en css se utiliza var(--big)*/
 }
 
 body{
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
+
+    background-color: #051e3e;
 }
 
 .main-container{
@@ -29,6 +51,13 @@ body{
 .mainTitle {
 margin-bottom: 0;
 margin-top: 10px;
+
+color: white
+}
+
+.subtitle {
+    color: var(--azul-fuerte-2);
+    font-size: 24px;
 }
 
 .card-container{
@@ -40,6 +69,7 @@ margin-top: 10px;
     height: 100%;
 
     background-color: #c24d2c;
+    border: 4px solid var(--tinto);
     border-radius: 20px;
 }
 
@@ -58,6 +88,8 @@ margin-top: 10px;
 .michis-info{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .michi-pic{
@@ -65,6 +97,7 @@ margin-top: 10px;
     width: 150px;
     height: 150px;
 
+    border: 3px solid var(--tinto);
     border-radius: 8px;
     margin-bottom: 10px;
     /* object-fit: cover; */
@@ -78,18 +111,104 @@ margin-top: 10px;
     width: 100%;
 }
 
-/* Boton */
+.btn-quitar-michi {
+    width: 130px;
+    height: 30px;
 
-.btn-3 {
-    margin-top: 30px;
-    width: 140px;
-    height: 45px;
+    font-weight: 600;
+    /* font-size: 12px; */
 
-    border: 1px solid black;
+    border-radius: 20px;
+    /* border-style: none; */
+    border: 2px solid var(--tinto);
+    color: var(--azul-fuerte-2);
 }
 
-.btn-3:hover {
+.btn-quitar-michi:hover {
     border: 2px solid black;
 }
 
+.btn-quitar-michi:active {
+    background-color:lightgray;
+}
+
+/* Boton */
+
+.btn-3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    width: 150px;
+    height: 45px;
+
+    background-color: #008744;
+    color: white;
+    font-weight: 600;
+    border: 1px solid #7bc043;
+    border-radius: 20px;
+}
+
+.btn-3:hover {
+    border: 2px solid #7bc043;
+}
+
+.btn-3:active {
+    background-color:#7bc043;
+}
+
 /* -------- */
+
+.footer {
+    color: white;
+}
+
+
+
+@media(max-width: 770px) {
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        width: 400px;
+        height: 100%;
+    
+        background-color: #c24d2c;
+        border-radius: 20px;
+    }
+
+    .michis-container{
+        display: flex;
+        justify-content:space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+        /* margin-bottom: 20px; */
+    }
+
+    .michis-info{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .michi-pic{
+        align-self: center;
+        width: 150px;
+        height: 150px;
+    
+        border-radius: 8px;
+        margin-bottom: 10px;
+        /* object-fit: cover; */
+    }
+    
+    .fav-michis-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* justify-content:space-evenly; */
+        gap: 30px;
+        width: 100%;
+
+        margin-bottom: 20px;
+    }
+
+}
