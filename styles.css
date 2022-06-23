@@ -10,7 +10,7 @@ body{
 
 .main-container{
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 .section-1-container{
@@ -26,13 +26,18 @@ body{
 
 }
 
+.mainTitle {
+margin-bottom: 0;
+margin-top: 10px;
+}
+
 .card-container{
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
     width: 750px;
-    height: 400px;
+    height: 100%;
 
     background-color: #c24d2c;
     border-radius: 20px;
@@ -47,8 +52,8 @@ body{
     justify-content:space-around;
     /* gap: 20px; */
     width: 100%;
-
 }
+
 
 .michis-info{
     display: flex;
@@ -63,6 +68,14 @@ body{
     border-radius: 8px;
     margin-bottom: 10px;
     /* object-fit: cover; */
+}
+
+.fav-michis-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* justify-content:space-evenly; */
+    gap: 50px;
+    width: 100%;
 }
 
 /* Boton */
